@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,67 +8,94 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
+            background-color: #040404;
+            color: #333;
             margin: 0;
             padding: 0;
         }
+
         .container {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            padding: 20px;
+            padding: 40px 10px;
         }
+
         .card {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 30%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
         }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
         .card h2 {
-            color: #bbb;
-            font-size: 1.5em;
+            background-color: #29cc61;
+            color: #fff;
             text-align: center;
-            margin-bottom: 20px;
+            padding: 15px 0;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-size: 1.6em;
+            margin: 0;
         }
+
         .card ul {
             list-style-type: none;
-            padding: 0;
+            padding: 20px;
+            margin: 0;
         }
+
         .card ul li {
             margin: 10px 0;
+            font-size: 1em;
+            line-height: 1.6em;
+            color: #555;
+            display: flex;
+            align-items: center;
         }
+
         .card ul li:before {
-            content: '✅';
+            content: '✔';
+            color: #29cc61;
             margin-right: 10px;
-            color: #50fa7b;
         }
+
+        .card ul li.no:before {
+            content: '✘';
+            color: #e74c3c;
+        }
+
         .price {
-            font-size: 2em;
+            font-size: 2.1em;
             font-weight: bold;
             margin: 20px 0;
-            color: #50fa7b;
+            color: #29cc61;
             text-align: center;
         }
+
         .order-btn {
             display: block;
             text-align: center;
-            padding: 10px 20px;
-            background-color: #50fa7b;
+            padding: 12px 25px;
+            background-color: #2c3e50;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
+            margin: 20px auto 30px;
+            width: 80%;
+            transition: background-color 0.3s ease;
         }
+
         .order-btn:hover {
-            background-color: #50fa7b;
+            background-color: #29cc61;
         }
-        .list .no::before {
-            content: '❌';
-        }
-        
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -75,18 +103,17 @@
             }
 
             .card {
-                width: 80%;
-                margin-bottom: 20px;
+                width: 90%;
             }
         }
 
         @media (max-width: 480px) {
             .card {
-                width: 95%;
+                width: 100%;
             }
 
             .card h2 {
-                font-size: 1.2em;
+                font-size: 1.4em;
             }
 
             .card ul li {
@@ -94,84 +121,88 @@
             }
 
             .price {
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <h2>Idéal pour une présence en ligne</h2>
-        <ul class="list">
-            <li>Nom de domaine gratuit</li>
-            <li>Design responsive et moderne</li>
-            <li>Création graphique : images, bannières, logo</li>
-            <li>Maximum 5 pages</li>
-            <li>Formulaire de contact, Google Maps...</li>
-            <li>Intégration des réseaux sociaux</li>
-            <li>Optimisation SEO de base</li>
-            <li>Support technique basique (email)</li>
-            <li>1 adresse email professionnelle</li>
-            <li>Livraison d'un site personnalisé clés en mains</li>
-            <li>Création de 5 pages (Page supplémentaire dès 5000 FCFA seulement)</li>
-            <li>1 mois suivi / maintenance</li>
-            <li class="no">Boutique en ligne</li>
-            <li class="no">Pas de produits</li>
-            <li class="no">Moyen de paiement</li>
-            <li class="no">Intégration WhatsApp</li>
-        </ul>
-        <div class="price">250 000 FCFA</div>
-    </div>
-    
-    <!-- Duplicate the above card two more times -->
-    <div class="card">
-        <h2>Idéal pour les PME</h2>
-        <ul class="list">
-            <li>Nom de domaine gratuit</li>
-            <li>Design responsive et moderne</li>
-            <li>Création graphique : images, bannières, logo</li>
-            <li>Maximum 10 pages</li>
-            <li>Formulaire de contact, Google Maps...</li>
-            <li>Intégration des réseaux sociaux</li>
-            <li>Optimisation SEO de base</li>
-            <li>Support technique basique (email)</li>
-            <li>1 adresses email professionnelles</li>
-            <li>Livraison d'un site personnalisé clés en mains</li>
-            <li>Création de 5 pages (Page supplémentaire dès 5000 FCFA seulement)</li>
-            <li>Boutique en ligne </li>
-            <li>Ajout de 15 produits</li>
-            <li>3 mois suivi / maintenance</li>
-            <li class="no">Moyen de paiement</li>
-            <li class="no">Intégration WhatsApp</li>
-        </ul>
-        <div class="price">300 000 FCFA</div>
-    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Offre PME Basique</h2>
+            <ul class="list">
+                <li>Nom de domaine gratuit</li>
+                <li>Design responsive et moderne</li>
+                <li>Création graphique : images, bannières, logo</li>
+                <li>Maximum 5 pages</li>
+                <li>Formulaire de contact, Google Maps...</li>
+                <li>Intégration des réseaux sociaux</li>
+                <li>Optimisation SEO de base</li>
+                <li>Support technique basique (email)</li>
+                <li>1 adresse email professionnelle</li>
+                <li>Livraison d'un site personnalisé clés en mains</li>
+                <li>Création de 5 pages (Page supplémentaire dès 5000 FCFA seulement)</li>
+                <li>1 mois suivi / maintenance</li>
+                <li class="no">Boutique en ligne</li>
+                <li class="no">Pas de produits</li>
+                <li class="no">Moyen de paiement</li>
+                <li class="no">Intégration WhatsApp</li>
+            </ul>
+            <div class="price">250 000 FCFA</div>
+            <a href="#" class="order-btn">Commander</a>
+        </div>
 
-    <div class="card">
-        <h2>Idéal pour les e-commerçants</h2>
-        <ul>
-            <li>Nom de domaine gratuit</li>
-            <li>Design responsive et moderne</li>
-            <li>Création graphique : images, bannières, logo</li>
-            <li>Maximum 5 pages</li>
-            <li>Formulaire de contact, Google Maps...</li>
-            <li>Intégration des réseaux sociaux</li>
-            <li>Optimisation SEO de base</li>
-            <li>Support technique basique (email)</li>
-            <li>1 adresse email professionnelle</li>
-            <li>Livraison d'un site personnalisé clés en mains</li>
-            <li>Création de 5 pages (Page supplémentaire dès 5000 FCFA seulement)</li>
-            <li>Boutique en ligne</li>
-            <li>Ajout de 30 produits</li>
-            <li>12 mois suivi / maintenance</li>
-            <li>Moyen de paiement</li>
-            <li>Intégration WhatsApp</li>
-        </ul>
-        <div class="price">500 000 FCFA</div>
+        <div class="card">
+            <h2>Idéal pour une présence en ligne</h2>
+            <ul class="list">
+                <li>Nom de domaine gratuit</li>
+                <li>Design responsive et moderne</li>
+                <li>Création graphique : images, bannières, logo</li>
+                <li>Maximum 10 pages</li>
+                <li>Formulaire de contact, Google Maps...</li>
+                <li>Intégration des réseaux sociaux</li>
+                <li>Optimisation SEO de base</li>
+                <li>Support technique basique (email)</li>
+                <li>1 adresse email professionnelle</li>
+                <li>Livraison d'un site personnalisé clés en mains</li>
+                <li>Création de 5 pages (Page supplémentaire dès 5000 FCFA seulement)</li>
+                <li>Boutique en ligne</li>
+                <li>Ajout de 15 produits</li>
+                <li>3 mois suivi / maintenance</li>
+                <li class="no">Moyen de paiement</li>
+                <li class="no">Intégration WhatsApp</li>
+            </ul>
+            <div class="price">300 000 FCFA</div>
+            <a href="#" class="order-btn">Commander</a>
+        </div>
+
+        <div class="card">
+            <h2>Idéal pour les e-commerçants</h2>
+            <ul>
+                <li>Nom de domaine gratuit</li>
+                <li>Design responsive et moderne</li>
+                <li>Création graphique : images, bannières, logo</li>
+                <li>Maximum 5 pages</li>
+                <li>Formulaire de contact, Google Maps...</li>
+                <li>Intégration des réseaux sociaux</li>
+                <li>Optimisation SEO de base</li>
+                <li>Support technique basique (email)</li>
+                <li>1 adresse email professionnelle</li>
+                <li>Livraison d'un site personnalisé clés en mains</li>
+                <li>Création de 5 pages (Page supplémentaire dès 5000 FCFA seulement)</li>
+                <li>Boutique en ligne</li>
+                <li>Ajout de 30 produits</li>
+                <li>12 mois suivi / maintenance</li>
+                <li>Moyen de paiement</li>
+                <li>Intégration WhatsApp</li>
+            </ul>
+            <div class="price">500 000 FCFA</div>
+            <a href="#" class="order-btn">Commander</a>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>

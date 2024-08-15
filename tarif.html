@@ -15,6 +15,7 @@
         .container {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px;
         }
         .card {
@@ -23,6 +24,7 @@
             border-radius: 10px;
             width: 30%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
         }
         .card h2 {
             color: #bbb;
@@ -60,9 +62,38 @@
         .order-btn:hover {
             background-color: #50fa7b;
         }
-
         .list .no::before {
             content: '❌';
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 95%;
+            }
+
+            .card h2 {
+                font-size: 1.2em;
+            }
+
+            .card ul li {
+                font-size: 0.9em;
+            }
+
+            .price {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>

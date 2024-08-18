@@ -1275,6 +1275,8 @@ section .container {
 
         .order-btns:hover {
             background-color: #29cc61;
+            color: black;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {

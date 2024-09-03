@@ -1307,3 +1307,16 @@ section .container {
                 font-size: 1.8em;
             }
         }
+
+.btn-custom {
+  background-color: #29cc61;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-custom:hover {
+  background-color: #25b857;
+}
